@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of RyanGD2026 (Ryan de Freitas Bordez), showcasing his work and projects in game development.">
+    <meta name="keywords" content="RyanGD2026, Ryan de Freitas Bordez, game development, projects, portfolio">
+    <meta name="author" content="Ryan de Freitas Bordez">
+    <meta property="og:title" content="RyanGD2026 (Ryan de Freitas Bordez)">
+    <meta property="og:description" content="Personal website of RyanGD2026 (Ryan de Freitas Bordez), showcasing his work and projects in game development.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/289019686?s=400&u=7427071e9a445415a4cd8b6ffa001c944cbc96e0&v=4">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/289019686?s=400&u=7427071e9a445415a4cd8b6ffa001c944cbc96e0&v=4" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        body {
+            background-image: url("RyanGD2026_Wallpaper.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps background still while scrolling */
+            font-family: 'Inter', sans-serif;
+            margin: 20px; /* Give the page some breathing room */
+        }
+
+        /* --- LIQUID GLASS BASE CLASS --- */
+        .liquid-glass {
+            /* 1. Reflective Gradient */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02));
+            
+            /* 2. Glass Blur */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            
+            /* 3. Outer depth shadow + Inner highlight shadow */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.15);
+            
+            /* 4. Highlighted edges (lighter on top and left to simulate a light source) */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            
+            border-radius: 30px; /* Smoothed out the border radius slightly */
+            
+            /* 5. Fluid Animation */
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Fluid Animation Keyframes */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; /* Better alignment for Nav */
+            align-items: center;
+            padding: 10px 30px;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Modernized to flexbox instead of floats */
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Liquid hover effect */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        section {
+            padding: 30px;
+            margin-bottom: 25px; /* Adds space between glass panels to see the background */
+            /* Staggering the animation slightly so they don't all move at the exact same time */
+            animation-delay: calc(var(--animation-order) * 1s); 
+        }
+
+        h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        p {
+            color: #E2E8F0;
+            line-height: 1.6;
+        }
+
+        details {
+            margin-top: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        details summary {
+            color: white;
+            cursor: pointer;
+            font-weight: 700;
+        }
+    </style>
+    <title>RyanGD2026 (Ryan de Freitas Bordez)</title>
+</head>
+<body>
+    <nav class="liquid-glass">
+        <div class="logo">
+            <img src="https://avatars.githubusercontent.com/u/289019686?s=400&u=7427071e9a445415a4cd8b6ffa001c944cbc96e0&v=4" alt="RyanGD2026 Avatar" style="width:50px;height:50px;border-radius:50%;vertical-align:middle;margin-right:15px;">
+            <h1>RyanGD2026</h1>
+        </div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#ide">The Ultimate IDE</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="liquid-glass" style="--animation-order: 0;">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ryan de Freitas Bordez, also known as RyanGD2026. I'm passionate about game development and love creating immersive gaming experiences. I have a background in programming and design, and I'm always eager to learn new technologies and techniques in the gaming industry.</p>
+        <p>And we will build the IDE called Cubey Studio!</p>
+        <img src="https://badgen.net/static/Cubey%20Studio/0.9.0/007dff" alt="Cubey Studio Badge" style="width:150px;height:auto;margin-top:10px;">
+    </section>
+
+    <section id="ide" class="liquid-glass" style="--animation-order: 1;">
+        <h2>The Ultimate IDE</h2>
+        <p>Welcome to Cubey Studio, the ultimate integrated development environment for game developers, apps, websites and even OSes!</p>
+    </section>
+
+    <section id="contact" class="liquid-glass" style="--animation-order: 2;">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <details>
+            <summary>Email:</summary>
+            <p style="margin-bottom: 0;">ryangd2026developer14@gmail.com</p>
+        </details>
+    </section>
+</body>
+</html>
